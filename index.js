@@ -77,7 +77,9 @@ function CreateTodoFromJSON() {
              
             tick.addEventListener('change',function(){
                 (this).closest('tr').style.textDecoration = 'line-through 3px red';
+                if((this).checked==true){
                 count++;
+                }
                 if(count==5){
                     alert("5 Tasks have been Successfully Completed");
                     count=0;
